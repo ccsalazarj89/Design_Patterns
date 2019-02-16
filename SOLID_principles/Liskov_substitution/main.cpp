@@ -64,6 +64,14 @@ void process(Rectangle& r){
          << ", got "<<r.area() << endl;
 }
 
+//It's a good solution , doing factories  and would break the Liskov principle. 
+
+struct RectangleFactory
+{
+    static Rectangle create_rectangule(int w , int h);
+    static Rectangle create_square(int size);
+};
+
 int main(){
 
     Rectangle r{3,4};
